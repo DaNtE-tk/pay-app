@@ -1,4 +1,4 @@
-import 'dart:convert';
+// import 'dart:convert';
 
 // List<PaymentDataModel> paymentDataModelFronJson(String str) =>
 //     List<PaymentDataModel>.from(
@@ -15,7 +15,6 @@ class PaymentOverlay {
   final String amount;
   final String currency;
   final String beneficiary;
-  final String bankCode;
   final bool isActive;
   final bool isPaid;
   final bool isSuspended;
@@ -33,7 +32,6 @@ class PaymentOverlay {
     required this.amount,
     required this.currency,
     required this.beneficiary,
-    required this.bankCode,
     required this.isActive,
     required this.isPaid,
     required this.isSuspended,
@@ -47,13 +45,12 @@ class PaymentOverlay {
     return PaymentOverlay(
       id: json['_id'],
       referenceId: json['reference_id'],
-      transactionId: json['transaction_id'],
+      transactionId: json['transaction_id'], 
       upiId: json['upi_id'],
       type: json['type'],
       amount: json['amount'],
       currency: json['currency'],
       beneficiary: json['beneficiary'],
-      bankCode: json['bank_code'],
       isActive: json['isActive'],
       isPaid: json['isPaid'],
       isSuspended: json['isSuspended'],
